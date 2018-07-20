@@ -18,10 +18,7 @@ export default {
 
 <style>
     @import url('https://fonts.googleapis.com/css?family=Fruktur|Merienda');
-    @font-face {
-    	font-family: 'Outrun future';
-    	src: url('~src/assets/fonts/Outrun-future.odt');
-    }
+
     html {
         background: #272727;
     }
@@ -35,6 +32,6 @@ export default {
       margin-top: 60px;
     }
     h1 {
-        font-family: 'Outrun future';
+        font-family: 'Merienda', cursive;
     }
 </style>

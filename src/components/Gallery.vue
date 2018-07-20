@@ -1,6 +1,10 @@
 <template>
   <div class="gallery-blurb">
     <h1>{{ msg }}</h1>
+<vue-picture-swipe :items="items"></vue-picture-swipe>
+
+sadasdsad
+<lightbox :image="image"></lightbox>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -30,11 +34,28 @@
 </template>
 
 <script>
+// import VuePictureSwipe from 'vue-picture-swipe';
 export default {
   name: 'Gallery',
   props: {
     msg: String
-  }
+  },
+  data() {
+  return {
+    items: [{
+      src: require('../static/photos/theworldenders/IMG_4514.jpg'),
+      thumbnail: require('../static/photos/theworldenders/IMG_4514.jpg'),
+      w: 600,
+      h: 400
+    },
+    {
+      src: require('../static/photos/theworldenders/IMG_4605.jpg'),
+      thumbnail: require('../static/photos/theworldenders/IMG_4605.jpg'),
+      w:1920,
+      h:1080
+    }
+  ]};
+}
 }
 </script>
 

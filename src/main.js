@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VuePreview from 'vue-preview'
-
+import VuePictureSwipe from 'vue-picture-swipe'
+import lightbox from 'vlightbox';
+Vue.use(lightbox);
+Vue.component('vue-picture-swipe', VuePictureSwipe)
 Vue.config.productionTip = false
-Vue.use(VuePreview)
 
 new Vue({
   render: h => h(App)
