@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/steve.png">
     <Gallery msg="The World Enders"/>
   </div>
 </template>
@@ -20,7 +19,7 @@ export default {
     @import url('https://fonts.googleapis.com/css?family=Fruktur|Merienda');
 
     html {
-        background: #272727;
+        background: #141414;
     }
     #app {
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -28,7 +27,7 @@ export default {
       -moz-osx-font-smoothing: grayscale;
       text-align: center;
       color: #be7b7c;
-      background: #272727;
+      background: #141414;
       margin-top: 60px;
     }
     h1 {
