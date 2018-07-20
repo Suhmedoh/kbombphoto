@@ -1,13 +1,21 @@
 <template>
-  <div class="gallery-blurb">
-    <h1>{{ msg }}</h1>
-    <div class="gallery-set">
-        <div id="tester">
-            <div class="overlay"> </div>
-        </div>
-        <vue-picture-swipe :items="items"></vue-picture-swipe>
+    <div class="gallery-blurb">
+        <a class="button" href="https://captainkbomb.wordpress.com/2018/07/05/summoning-the-world-ender/">Blog explaining the Behind-The-Scenes of the photoshoot</a>
+      <div id="tester">
+          <div class="overlay">
+              <h1> The World Enders </h1>
+          </div>
+      </div>
+      <div class="grid-left">
+          <div class="overlay"> </div>
+      </div>
+      <div class="gallery-set">
+          <vue-picture-swipe :items="items"></vue-picture-swipe>
+      </div>
+      <div class="grid-right">
+          <div class="overlay"> </div>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -25,25 +33,29 @@ export default {
                     src: require('../static/photos/theworldenders/IMG_4514.jpg'),
                     thumbnail: require('../static/photos/theworldenders/thumb.IMG_4514.jpg'),
                     w: 1024,
-                    h: 683
+                    h: 683,
+                    title: 'Jimmy. Portrayed by Liam.'
                 },
                 {
                     src: require('../static/photos/theworldenders/IMG_4522.jpg'),
                     thumbnail: require('../static/photos/theworldenders/thumb.IMG_4522.jpg'),
                     w: 1024,
-                    h: 683
+                    h: 683,
+                    title: 'Charlie. Portrayed by Brittany.'
                 },
                 {
                     src: require('../static/photos/theworldenders/IMG_4524.jpg'),
                     thumbnail: require('../static/photos/theworldenders/thumb.IMG_4524.jpg'),
                     w: 1024,
-                    h: 683
+                    h: 683,
+                    title: 'The Fool. Portrayed by Dan.'
                 },
                 {
                     src: require('../static/photos/theworldenders/IMG_4530.jpg'),
                     thumbnail: require('../static/photos/theworldenders/thumb.IMG_4530.jpg'),
                     w: 1024,
-                    h: 683
+                    h: 683,
+                    title: 'Charlie. Portrayed by Brittany'
                 },
                 {
                     src: require('../static/photos/theworldenders/IMG_4538.jpg'),
@@ -221,12 +233,45 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    .button {
+        background-color: #b45049;
+        border-radius: 2px;
+        padding: 15px 30px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        color: #c1cfda;
+    }
+    .grid-left {
+        display: inline-block;
+        width: 20%;
+        height: 1000px;
+        float: left;
+        background-image: url('../static/photos/theworldenders/IMG_4552.jpg');
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .grid-right {
+        display: inline-block;
+        width: 20%;
+        height: 1000px;
+        float: right;
+        background-image: url('../static/photos/theworldenders/IMG_4552.jpg');
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .gallery-set {
+        display: inline-block;
         margin: auto;
-        width:50%;
+        background-color: (rgba(20, 20, 20, .5));
+        width:60%;
     }
     #tester {
-        background-image: url('../static/photos/theworldenders/IMG_4540.jpg');
+        background-image: url('../static/photos/theworldenders/IMG_4552.jpg');
         height: 300px;
         width: auto;
         background-attachment: fixed;
@@ -239,6 +284,7 @@ export default {
         opacity:.5;
         width: 100%;
         height: 100%;
+
     }
     h3 {
       margin: 40px 0 0;
